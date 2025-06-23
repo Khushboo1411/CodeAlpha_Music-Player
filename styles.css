@@ -1,0 +1,136 @@
+body {
+    background: #121212;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.music-player {
+    background: #1e1e1e;
+    border: 2px solid #2e2e2e;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 1.25rem;
+    color: #0f0;
+    margin-bottom: 1rem;
+}
+
+.track-info img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 2px solid #0f0;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    height: 200px;
+    
+}
+
+.track-info h2, .track-info p {
+    color: #0f0;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
+
+.controls button {
+    background: #333;
+    border: none;
+    color: #0f0;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: #444;
+}
+
+.progress-container, .volume-container {
+    color: #0f0;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+#progress-bar, #volume-slider {
+    flex-grow: 1;
+    height: 6px;
+    background: #222;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#progress-bar::-webkit-slider-thumb, 
+#volume-slider::-webkit-slider-thumb {
+    background: #0f0;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.playlist {
+    background: #1a1a1a;
+    border: 1px solid #0f0;
+    padding: 0.5rem;
+    border-radius: 6px;
+    max-height: 160px;
+    overflow-y: auto;
+    font-size: 0.8rem;
+    margin-top: 2px;
+    height: 30px;
+    color: aliceblue;
+}
+
+#playlist-items li {
+    color: #0f0;
+    padding: 0.25rem;
+    margin: 0.25rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#playlist-items li:hover, #playlist-items li.active {
+    background: #0f0;
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #0f0;
+    border-radius: 3px;
+}
+
+@media (max-width: 480px) {
+    .music-player {
+        padding: 0.75rem;
+    }
+
+    .controls button {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .playlist {
+        max-height: 120px;
+        font-size: 0.75rem;
+    }
+}
